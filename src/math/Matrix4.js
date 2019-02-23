@@ -502,6 +502,19 @@ Object.assign( Matrix4.prototype, {
 
 	},
 
+	determinant3x3: function () {
+
+		var te = this.elements;
+
+		var a = te[ 0 ], b = te[ 1 ], c = te[ 2 ],
+			d = te[ 4 ], e = te[ 5 ], f = te[ 6 ],
+			g = te[ 8 ], h = te[ 9 ], i = te[ 10 ];
+
+		return a * e * i - a * f * h - b * d * i + b * f * g + c * d * h - c * e * g;
+
+	},
+
+
 	transpose: function () {
 
 		var te = this.elements;

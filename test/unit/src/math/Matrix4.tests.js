@@ -419,6 +419,18 @@ export default QUnit.module( 'Maths', () => {
 
 		} );
 
+		QUnit.test( "determinant3x3", ( assert ) => {
+
+			var a = new Matrix4();
+			assert.ok( a.determinant3x3() == 1, "Passed!" );
+
+			a.elements[ 0 ] = 2;
+			assert.ok( a.determinant3x3() == 2, "Passed!" );
+
+			a.elements[ 0 ] = 0;
+			assert.ok( a.determinant3x3() == 0, "Passed!" );
+		} );
+
 		QUnit.test( "transpose", ( assert ) => {
 
 			var a = new Matrix4();

@@ -115,6 +115,11 @@ export class Matrix4 implements Matrix {
   determinant(): number;
 
   /**
+   * Computes determinant of 3x3 part of this matrix.
+   */
+  determinant3x3(): number;
+
+  /**
    * Transposes this matrix.
    */
   transpose(): Matrix4;
